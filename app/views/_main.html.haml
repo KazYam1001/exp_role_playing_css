@@ -9,7 +9,12 @@
     = link_to edit_group_path(@group) do
       .main-header__edit-btn Edit
   .messages
-    = render @messages
+    - 20.times do
+      .message
+        .upper-info
+          %p.upper-info__user ユーザー
+          %p.upper-info__date 2019/03/22(Fri) 15:30:02
+        %p.message__text メッセージ
   .form
     = form_for [@group, @message], html:{ class: "new-message" } do |f|
       .input-box
