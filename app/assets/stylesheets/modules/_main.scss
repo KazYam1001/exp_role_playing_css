@@ -1,10 +1,10 @@
 .chat-main {
   width: calc(100vw - 300px);
+  padding: 0 40px;
 }
 
 .main-header {
   height: 100px;
-  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #eee;
@@ -39,7 +39,7 @@
 
 .messages {
   height: calc(100vh - 190px);
-  padding: 46px 40px;
+  padding-top: 46px;
   background-color: $messages_background;
   overflow: scroll;
 }
@@ -66,7 +66,7 @@
 
 .form {
   height: 90px;
-  padding: 20px 40px;
+  padding: 20px 0;
   background-color: $main_form_background;
 }
 
