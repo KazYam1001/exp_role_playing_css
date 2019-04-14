@@ -1,0 +1,17 @@
+@import "font-awesome";
+@import "reset";
+@import "config/colors";
+@import "mixin/basic";
+@import "modules/flash";
+@import "modules/side";
+@import "modules/main";
+@import "modules/user";
+@import "modules/group_form";
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
