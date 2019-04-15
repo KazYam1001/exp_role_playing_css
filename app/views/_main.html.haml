@@ -6,8 +6,8 @@
         Member：
         - @group.users.each do |user|
           %li.member-list__member= user.name
-    = link_to edit_group_path(@group) do
-      .main-header__edit-btn Edit
+    .main-header__edit-btn
+      = link_to "Edit", edit_group_path(@group), class: "main-header__edit-btn--link"
   .messages
     - 20.times do
       .message
