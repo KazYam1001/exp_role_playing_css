@@ -1,16 +1,23 @@
+.wrapper {
+  display: flex;
+}
+
 .chat-main {
   width: calc(100vw - 300px);
-  padding: 0 40px;
 }
 
 .main-header {
   height: 100px;
+  padding: 0 40px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: solid 1px #eee;
   &__edit-btn {
     border: solid 1px $light_blue;
     height: 40px;
     &--link {
+      display: block;
       line-height:40px;
       padding: 0 20px;
       color: $light_blue;
@@ -25,17 +32,19 @@
 }
 
 .member-list {
+  display: flex;
   margin-top: 15px;
   font-size: 12px;
   color: $text_light_gray;
-  &__member {
+  &__member + &__member {
     margin-left: 0.3rem;
   }
 }
 
 .messages {
   height: calc(100vh - 190px);
-  padding-top: 46px;
+  padding: 46px 40px 0;
+  overflow: scroll;
   background-color: $messages_background;
 }
 
@@ -61,7 +70,7 @@
 
 .form {
   height: 90px;
-  padding: 20px 0;
+  padding: 20px 40px;
   background-color: $main_form_background;
 }
 
@@ -80,9 +89,10 @@
 
 .input-box {
   width: 100%;
+  position: relative;
   &__text {
     height: 50px;
-    width: 940px;
+    width: 100%;
     padding: 0 40px 0 10px;
     color: $text_dark_gray;
     border-style: none;
@@ -90,6 +100,9 @@
 }
 
 .image-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 1.3rem;
   cursor: pointer;
   &__input {
